@@ -24,12 +24,13 @@ El objetivo principal de CareMe es ofrecer una plataforma de fácil acceso para 
 
 ## Autores ✨
 
-| **Nombre**                                | **ID**            |
-|-------------------------------------------|-------------------|
-| Jack Eddie Roque Tello                    | U20221C448        |
-| Rodríguez Mena José Miguel               | U202324568        |
-| Valenzuela De la Cruz Thamara Zulay       | U201918360        |
-| Lara Talla Carlos Fabrizio                | U202114534        |
+| Nombre completo                      | Código       |
+|-------------------------------------|--------------|
+| Roque Tello, Jack Eddie             | u20221c448   |
+| Bottger Salazar, Johan Karl         | u202210735   |
+| Lapa de la Cruz, Gabriel Omar       | u202216831   |
+| Santos Torres, Juan Manuel          | u20221a371   |
+| Stanley Gutierrez, Tume             | u202118152   |
 
 ## Tecnologías Utilizadas 💻
 

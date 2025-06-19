@@ -1,82 +1,285 @@
-
 <!DOCTYPE html>
-<html lang="pe">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareMe | Cuidadores profesionales</title>
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./assets/img/icon.png" type="image/x-icon">
+    <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <!-- Únicamente usamos bootstrap para colocar el icono de la hamburguesa en el nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./public/assets/styles/styles.css">
 </head>
 <body>
     <header>
-        <img src="./assets/img/logo.png" alt="logo-careme" srcset="" class="logo">
-        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-        <nav>
-            <ul class="nav-parts">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">¿Cómo funciona?</a></li>
-                <li><a href="#">Testimonios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="./public/login.html" class="register-btn" id="login">Acceder</a></li>
+        <p class="logo-text">CareMe</p>
+        <!-- boton de hamburguesa id = open -->
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="public/html/caregivers.html">Cuidadores</a></li>
+                <li><a href="public/html/dependent-persons.html">Personas Dependientes</a></li>
+                <li><a href="#contact-careme">Contáctanos</a></li>
+                <li><a href="#">Nosotros</a></li> 
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="public/html/login.html" class="login-btn" id="login">Inicia sesión</a></li>
+                <li><a href="public/html/login.html" class="register-btn" id="register">Regístrate</a></li>
+                <button class="accesibility-button">EN</button>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="home-banner">
+            <div class="hb-col1">
+                <h1><span>Cuidamos</span> su vida, su historia y su hogar, con un <span>servicio</span> tan <span>único</span> como ellos</h1>
+                <p class="description-h1">Somos la opción de confianza para cientos de familias que buscan el mejor cuidado a domicilio para sus seres queridos</p>
+                <button class="call-to-action">Empieza ahora</button>
+                <a href="public/html/caregivers.html" class="caregiver-link">¿Eres cuidador?</a>
+            </div>
+            <div class="hb-col2">
+                <img src="public/assets/images/home-banner.png" alt="home-banner" class="home-banner-image">
+            </div>
+        </section>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Cuidadores profesionales para quienes más amas</h1>
-            <p>Conecta con cuidadores profesionales, humanos y confiables, comprometidos con el bienestar de tus seres queridos.</p>
-            <button class="search-cta">Buscar cuidadores</button>
-        </div>
-        <div class="hero-image">
-            <div class="slider-indicators">
-                <span class="indicator" data-index="0"></span>
-                <span class="indicator" data-index="1"></span>
-                <span class="indicator" data-index="2"></span>
-              </div>
-        </div>
-    </section>
+        <section class="about-us">
+            <div class="au-col2">
+                <h2 class="why-choose-title">¿Por qué elegir <span>CareMe?</span></h2>
+                <section class="reasons-list">
+                    <div class="reason">
+                        <img src="public/assets/icons/bienestar.png" alt="bienestar-icon" class="reason-icon">
+                        <div class="reason-content">
+                            <h3>Tu bienestar es nuestra prioridad</h3>
+                            <p class="description-h3">Con cuidadores verificados, perfiles detallados y un botón de emergencia disponible, garantizamos tu seguridad y tranquilidad durante el cuidado de tu ser querido</p>
+                        </div>
+                    </div>
 
-    <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Ubicación o dirección">
-        <input type="text" class="search-input" placeholder="Especialidad">
-        <button class="search-btn">Buscar</button>
-    </div>
+                    <div class="reason">
+                        <img src="public/assets/icons/calidad.png" alt="calidad-icon" class="reason-icon">
+                        <div class="reason-content">
+                            <h3>El estándar de calidad más alto</h3>
+                            <p class="description-h3">Cuidadores profesionales, con experiencia y formación verificada, y la posibilidad de elegir tus preferencias de cuidado de la manera más fácil. Ahora podrás confiar en la atención que mereces para tu familiar.</p>
+                        </div>
+                    </div>
 
-    <section class="features">
-        <p class="section-title">¿Qué Ofrecemos?</p>
-        <div class="feature" id="verificacion">
-            <img src="./assets/img/verificacion.png" alt="verificacion" id="img-1">
-            <h3>Verificación</h3>
-            <p>Cuidadores con antecedentes verificados</p>
-        </div>
-        <div class="feature" id="atencion-personalizada">
-            <img src="./assets/img/atencionPersonalizada.png" alt="atencion personalizada" id="img-2">
-            <h3>Atención personalizada</h3>
-            <p>Cada familia, cada necesidad es única</p>
-        </div>
-        <div class="feature" id="ubicacion-tiempo-real">
-            <img src="./assets/img/ubicacion.jpg" alt="ubicacion tiempo real" id="img-3">
-            <h3>Ubicación en tiempo real</h3>
-            <p>Sigue al cuidador en todo momento</p>
-        </div>
-    </section>
+                    <div class="reason">
+                        <img src="public/assets/icons/precio.png" alt="precio-icon" class="reason-icon">
+                        <div class="reason-content">
+                            <h3>Claridad y transparencia en los precios</h3>
+                            <p class="description-h3">Siempre te mostramos el precio antes de confirmar el servicio, para que puedas tomar la decisión más adecuada. Sin sorpresas, solo un cuidado claro y accesible.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="app-store">
+                    <img src="public/assets/images/get-googleplay.png" alt="get in on Google Play">
+                    <img src="public/assets/images/get-appstore.png" alt="get on the App Store">
+                </div>
 
-    <div class="cta-banner">
-        <h2>¡Empieza a cuidar lo que mas te importa!</h2>
-    </div>
- 
-    <footer>
-        <p>&copy; 2025 CareMe - Todos los derechos reservados</p>
-        <div class="footer-links">
-            <a href="#">Inicio</a>
-            <a href="#">Términos</a>
-            <a href="#">Privacidad</a>
-            <a href="#">Contacto</a>
+                <p class="app-store-link">O descubre nuestra <span>aplicación web  →</span></p>
+            </div>
+            <div class="au-col1">
+                <img src="public/assets/images/cuidadores.jpg" alt="about-us-image" class="about-us-image">
+            </div>
+
+        </section>
+
+                <section class="application-section">
+            <div class="application-header">
+                <h2 class="application-title">Una aplicación que <span>Conecta a Todos</span></h2>
+                <p class="application-description">Ya sea una persona que busca brindar el mejor cuidado a sus seres queridos, o un cuidador profesional listo para ofrecer atención de calidad, CareMe es tu punto de encuentro con el futuro del cuidado domiciliario.</p>
+            </div>
+            
+            <div class="user-types">
+                <div class="user-type">
+                    <img src="public/assets/images/cuidador-profesional.png" alt="Cuidador profesional" class="user-type-image">
+                    <h3>Cuidadores profesionales</h3>
+                    <p>Conecta rápidamente con familias que necesitan tu cuidado. Únete a CareMe y accede a herramientas especializadas para ofrecer un servicio único y profesional.</p>
+                    <button class="user-type-btn">Sé parte del cambio</button>
+                </div>
+                
+                <div class="user-type">
+                    <img src="public/assets/images/familias.png" alt="Familias" class="user-type-image">
+                    <h3>Familias</h3>
+                    <p>Encuentra cuidadores verificados y profesionales, adaptados a tus necesidades. Tu ser querido es nuestra prioridad, por eso te garantizamos seguridad en todo momento.</p>
+                    <button class="user-type-btn">Únete a la familia CareMe</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-commitment">
+            <div class="commitment-header">
+                <h2 class="commitment-title">Tu seguridad, nuestro compromiso</h2>
+                <p class="commitment-description">Cada aspecto de nuestro servicio está diseñado pensando en la seguridad de tu ser querido y en brindarte tranquilidad en todo momento.</p>
+            </div>
+            
+            <div class="security-features-list">
+                <div class="security-feature">
+                    <img src="public/assets/icons/emergencia.png" alt="emergency icon" class="emergency-icon">
+                    <h3>Botón de emergencia</h3>
+                    <p>Añade una persona de confianza para que reciba notificaciones cada vez que se active una emergencia, comparte la ubicación del cuidador en tiempo real o contacta directamente con emergencias.</p>
+                </div>
+                <div class="security-feature">
+                    <img src="public/assets/icons/cuidado-geolocalizado.png" alt="geolocated care icon" class="geolocalizado-icon">
+                    <h3>Cuidado geolocalizado</h3>
+                    <p>Cada servicio de cuidado está geolocalizado, y puedes compartir el progreso con tus familiares para que siempre sepan dónde se encuentra el cuidador y tu ser querido.</p>
+                </div>
+                <div class="security-feature">
+                    <img src="public/assets/icons/soporte-tecnico.png" alt="technical support icon" class="support-icon">
+                    <h3>Estamos aquí para ti</h3>
+                    <p>Nuestro equipo de atención al cliente está disponible 24/7 para ayudarte con cualquier consulta, responder a tus dudas y garantizar que tengas la mejor experiencia posible con CareMe.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="testimonials-title">Que Dicen <span>Nuestros Clientes</span></h2>
+            
+            <div class="testimonial-card">
+                <img src="public/assets/images/cliente1.png" class="testimonial-avatar" alt="Juan Pérez Delgado Muñoz">
+                <p class="testimonial-text">"Desde que comencé a usar CareMe, mi vida ha sido mucho más tranquila. El cuidador que me asignaron es excelente, me cuida como si fuera parte de su familia. Lo mejor es que puedo confiar plenamente porque todos los cuidadores están verificados, precisamente CareMe es todo lo que buscaba en cuidado seguro y de calidad."</p>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-author">Juan Pérez Delgado Muñoz</p>
+                <div class="testimonial-dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </section>
+    <!-- Agregar después de </section> de testimonials-section -->
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-image">
+                    <img src="public/assets/icons/careme.svg" alt="Contacto CareMe" class="contact-bg-image">
+                </div>
+                <div class="contact-form-container">
+                    <h2 class="contact-title" id="contact-careme">Contáctanos</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido aquí" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Escribe tu correo aquí" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit-btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-support-text">
+                    <p>Contamos con el respaldo de entidades gubernamentales y organizaciones que apoyan nuestra visión de transformar el cuidado domiciliario en la región, conectando a cuidadores profesionales con familias que buscan atención de calidad y confianza.</p>
+                </div>
+                <div class="footer-partners">
+                    <img src="public/assets/icons/gob.svg" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
+                    <img src="public/assets/icons/fundacion-wiese.svg" alt="Fundación Wiese" class="partner-logo" id="fundacion-wiese">
+                    <img src="public/assets/icons/cruz-roja.svg" alt="Cruz Roja Peruana" class="partner-logo">
+                    <img src="public/assets/icons/bcp.svg" alt="BCP" class="partner-logo">
+                </div>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="public/assets/icons/careme.svg" alt="CareMe Logo" class="footer-logo-icon">
+                    </div>
+                    <div class="footer-app-links">
+                        <img src="public/assets/images/get-googleplay.png" alt="Google Play" class="app-download">
+                        <img src="public/assets/images/get-appstore.png" alt="App Store" class="app-download">
+                    </div>
+                    <div class="footer-country">
+                        <span>Perú</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Cuidadores</h4>
+                        <ul>
+                            <li><a href="#">Sé parte del cambio</a></li>
+                            <li><a href="#">Requisitos para cuidadores</a></li>
+                            <li><a href="#">Beneficios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Personas dependientes</h4>
+                        <ul>
+                            <li><a href="#">Únete a la familia CareMe</a></li>
+                            <li><a href="#">Testimonios</a></li>
+                            <li><a href="#">Cómo elegir al cuidador adecuado</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contáctanos</h4>
+                        <ul>
+                            <li><a href="#">Formulario de contacto</a></li>
+                            <li><a href="#">Atención al Cliente</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Nosotros</h4>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Conoce nuestra marca</a></li>
+                            <li><a href="#">Únete al equipo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <img src="public/assets/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="public/assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="public/assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="public/assets/icons/tiktok.svg" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="public/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2025 CareMe Perú, S.L.</p>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="public/assets/scripts/script.js"></script>
 </body>
 </html>

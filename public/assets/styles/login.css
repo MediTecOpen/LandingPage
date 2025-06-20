@@ -8,6 +8,7 @@
 body {
     background-color: #f8f9fa;
     color: #333;
+    overflow-x: hidden;
 }
 
 .auth-container {
@@ -32,16 +33,14 @@ body {
 
 .auth-logo {
     display: block;
-    margin: 0 auto;
-    width: 50%;
-    max-width: 600px;
+    margin: 0 auto 2rem;
+    width: 150px;
     height: auto;
-    margin-top: 2rem;
 }
 
 .auth-forms {
     position: relative;
-    min-height: 500px;
+    width: 100%;
 }
 
 .auth-form {
@@ -56,6 +55,7 @@ body {
 }
 
 .auth-form.active {
+    position: relative;
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
@@ -63,7 +63,7 @@ body {
 
 .auth-title {
     font-family: 'Zilla Slab', serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #3D44DD;
     margin-bottom: 0.5rem;
@@ -73,30 +73,30 @@ body {
 
 .auth-subtitle {
     color: #405057;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     position: relative;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
     color: #405057;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 10px 14px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     background-color: #f8f9fa;
 }
@@ -110,8 +110,8 @@ body {
 .forgot-password {
     display: block;
     text-align: right;
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
     color: #3D44DD;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -124,16 +124,16 @@ body {
 
 .auth-button {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     background-color: #3D44DD;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .auth-button:hover {
@@ -143,15 +143,17 @@ body {
 }
 
 .social-auth {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     text-align: center;
 }
 
 .social-auth p {
     color: #405057;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
     position: relative;
+    display: inline-block;
+    padding: 0 1rem;
 }
 
 .social-auth p::before,
@@ -159,17 +161,17 @@ body {
     content: "";
     position: absolute;
     top: 50%;
-    width: 30%;
+    width: 50px;
     height: 1px;
     background-color: #e0e0e0;
 }
 
 .social-auth p::before {
-    left: 0;
+    right: 100%;
 }
 
 .social-auth p::after {
-    right: 0;
+    left: 100%;
 }
 
 .social-icons {
@@ -201,7 +203,8 @@ body {
 .auth-switch {
     text-align: center;
     color: #405057;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
 .auth-switch a {
@@ -265,43 +268,181 @@ body {
     opacity: 0.9;
 }
 
-/* Responsive Design */
+/* Responsive Design Mejorado */
+@media (max-width: 1200px) {
+    .auth-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-message h2 {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 992px) {
     .auth-right {
         display: none;
     }
     
     .auth-left {
-        padding: 0rem 2rem;
+        padding: 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
     }
     
-    .auth-forms {
-        height: 100%;
+    .auth-content {
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .auth-logo {
+        width: 120px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-left {
+        padding: 1.5rem;
+    }
+    
+    .auth-title {
+        font-size: 1.6rem;
+    }
+    
+    .auth-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input {
+        padding: 9px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .auth-button {
+        padding: 11px;
+        font-size: 0.9rem;
+    }
+    
+    .social-auth {
+        margin: 1.2rem 0;
     }
 }
 
 @media (max-width: 576px) {
+    body {
+        background-color: white;
+    }
+    
     .auth-container {
-        padding: 0;
+        min-height: 100vh;
+        align-items: center;
     }
     
     .auth-left {
-        padding: 0rem 1.5rem;
+        padding: 1rem;
+        min-height: auto;
     }
     
-    .auth-title {
-        font-size: 3vh;
+    .auth-content {
+        max-width: 100%;
     }
     
     .auth-logo {
-        width: 50%;
+        width: 100px;
+        margin-bottom: 1rem;
     }
     
-    .auth-forms {
-        height: 100%;
+    .auth-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .auth-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 0.8rem;
+    }
+    
+    .form-group label {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .form-group input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .forgot-password {
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+    }
+    
+    .auth-button {
+        padding: 10px;
+        font-size: 0.85rem;
+        margin-top: 0.6rem;
+    }
+    
+    .social-auth {
+        margin: 1rem 0;
+    }
+    
+    .social-auth p {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .social-icons {
+        gap: 0.8rem;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-icon img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .auth-switch {
+        font-size: 0.85rem;
+        margin-top: 0.8rem;
     }
 }
 
+@media (max-width: 480px) and (max-height: 700px) {
+    .auth-logo {
+        width: 80px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .auth-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-group {
+        margin-bottom: 0.7rem;
+    }
+    
+    .social-auth {
+        margin: 0.8rem 0;
+    }
+}
+
+/* Estados adicionales */
 .form-group input:hover {
     border-color: #a5a5a5;
 }
@@ -319,4 +460,35 @@ body {
 .social-icon.apple {
     background-color: white;
     border: 1px solid #e0e0e0;
+}
+
+/* Animaciones mejoradas para transición entre formularios */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.auth-form.slide-in-right {
+    animation: slideInFromRight 0.4s ease forwards;
+}
+
+.auth-form.slide-in-left {
+    animation: slideInFromLeft 0.4s ease forwards;
 }

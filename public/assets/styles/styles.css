@@ -11,6 +11,10 @@ body {
     background-color: white;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -273,6 +277,11 @@ main {
     margin: 30px 0;
 }
 
+.app-store-link:hover, .play-store-link:hover, .app-download:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .app-store img {
     height: 45px;
     width: auto;
@@ -382,6 +391,11 @@ main {
 
 .user-type-btn:hover {
     background-color: #2A33B8;
+}
+
+.user-type:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 /* TESTIMONIALS SECTION */
@@ -533,12 +547,17 @@ main {
             text-align: center;
         }
 
+        .security-feature:hover {
+            transform: scale(1.1);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
         /* CONTACT SECTION */
-.contact-section {
-    margin: 100px 0 0 0;
-    background: linear-gradient(135deg, #3D44DD 0%, #5B63E8 100%);
-    border-radius: 20px 20px 0 0;
-}
+    .contact-section {
+        margin: 100px 0 0 0;
+        background: linear-gradient(135deg, #3D44DD 0%, #5B63E8 100%);
+        border-radius: 20px 20px 0 0;
+    }
 
 .contact-container {
     display: flex;

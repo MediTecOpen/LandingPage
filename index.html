@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-pe">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareMe | Cuidadores profesionales</title>
+    <title>CareMe | Home</title>
     <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
     <!-- Únicamente usamos bootstrap para colocar el icono de la hamburguesa en el nav -->
@@ -12,7 +12,9 @@
 </head>
 <body>
     <header>
-        <p class="logo-text">CareMe</p>
+        <a href="#">
+            <p class="logo-text">CareMe</p>
+        </a>
         <!-- boton de hamburguesa id = open -->
         <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
         <nav class="main-menu" id="nav">
@@ -20,12 +22,12 @@
             <ul class="menu-list">
                 <li><a href="public/html/caregivers.html">Cuidadores</a></li>
                 <li><a href="public/html/dependent-persons.html">Personas Dependientes</a></li>
-                <li><a href="#contact-careme">Contáctanos</a></li>
-                <li><a href="#">Nosotros</a></li> 
-                <li><a href="#">Ayuda</a></li>
+                <li><a href="#contact-careme" id="contactanos">Contáctanos</a></li>
+                <li><a href="#" id="nosotros">Nosotros</a></li> 
+                <li><a href="public/html/help.html" >Ayuda</a></li>
                 <li><a href="public/html/login.html" class="login-btn" id="login">Inicia sesión</a></li>
-                <li><a href="public/html/login.html" class="register-btn" id="register">Regístrate</a></li>
-                <button class="accesibility-button">EN</button>
+                <li><a href="public/html/login.html?form=register" class="register-btn" id="register">Regístrate</a></li>
+                <button class="accesibility-button">ES</button>
             </ul>
         </nav>
     </header>
@@ -34,7 +36,7 @@
             <div class="hb-col1">
                 <h1><span>Cuidamos</span> su vida, su historia y su hogar, con un <span>servicio</span> tan <span>único</span> como ellos</h1>
                 <p class="description-h1">Somos la opción de confianza para cientos de familias que buscan el mejor cuidado a domicilio para sus seres queridos</p>
-                <button class="call-to-action">Empieza ahora</button>
+                <a href="public/html/login.html?form=register"><button class="call-to-action">Empieza ahora</button></a>
                 <a href="public/html/caregivers.html" class="caregiver-link">¿Eres cuidador?</a>
             </div>
             <div class="hb-col2">
@@ -72,11 +74,11 @@
                 </section>
                 
                 <div class="app-store">
-                    <img src="public/assets/images/get-googleplay.png" alt="get in on Google Play">
-                    <img src="public/assets/images/get-appstore.png" alt="get on the App Store">
+                    <a href="https://play.google.com/store/apps" target="_blank"><img src="public/assets/images/get-googleplay.png" alt="get in on Google Play" class="play-store-link"></a>
+                    <a href="https://www.apple.com/app-store/" target="_blank"><img src="public/assets/images/get-appstore.png" alt="get on the App Store" class="app-store-link"></a>
                 </div>
 
-                <p class="app-store-link">O descubre nuestra <span>aplicación web  →</span></p>
+                <p class="app-store-link">O descubre nuestra <a href="public/html/login?form=register.html"><span>aplicación web  →</span></a></p>
             </div>
             <div class="au-col1">
                 <img src="public/assets/images/cuidadores.jpg" alt="about-us-image" class="about-us-image">
@@ -84,7 +86,7 @@
 
         </section>
 
-                <section class="application-section">
+        <section class="application-section">
             <div class="application-header">
                 <h2 class="application-title">Una aplicación que <span>Conecta a Todos</span></h2>
                 <p class="application-description">Ya sea una persona que busca brindar el mejor cuidado a sus seres queridos, o un cuidador profesional listo para ofrecer atención de calidad, CareMe es tu punto de encuentro con el futuro del cuidado domiciliario.</p>
@@ -95,14 +97,14 @@
                     <img src="public/assets/images/cuidador-profesional.png" alt="Cuidador profesional" class="user-type-image">
                     <h3>Cuidadores profesionales</h3>
                     <p>Conecta rápidamente con familias que necesitan tu cuidado. Únete a CareMe y accede a herramientas especializadas para ofrecer un servicio único y profesional.</p>
-                    <button class="user-type-btn">Sé parte del cambio</button>
+                    <a href="public/html/caregivers.html"><button class="user-type-btn">Sé parte del cambio</button></a>
                 </div>
                 
                 <div class="user-type">
                     <img src="public/assets/images/familias.png" alt="Familias" class="user-type-image">
                     <h3>Familias</h3>
                     <p>Encuentra cuidadores verificados y profesionales, adaptados a tus necesidades. Tu ser querido es nuestra prioridad, por eso te garantizamos seguridad en todo momento.</p>
-                    <button class="user-type-btn">Únete a la familia CareMe</button>
+                    <a href="public/html/dependent-persons.html"><button class="user-type-btn">Únete a la familia CareMe</button></a>
                 </div>
             </div>
         </section>
@@ -131,6 +133,50 @@
                 </div>
             </div>
         </section>
+
+        <!-- Video About Team Section -->
+<section class="video-section team-video" id="video-equipo">
+    <div class="video-container">
+        <div class="video-content">
+            <h2>Conoce a <span>Nuestro Equipo</span></h2>
+            <p>Somos un equipo apasionado por transformar el cuidado domiciliario. Descubre cómo nace la idea de CareMe y qué nos motiva cada día a conectar familias con cuidadores profesionales.</p>
+            <div class="video-cta">
+                <a href="#" class="video-btn" id="sobre-nosotros">Más sobre nosotros</a>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/5khP2gP1o6c?si=14StuF6NcI313rCv" 
+                title="Conoce al equipo CareMe"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Video About Product Section -->
+<section class="video-section product-video" id="video-producto">
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/zZsMh_DCMxg?si=8rrpuK8rTfmegq8o" 
+                title="CareMe en Acción"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-content">
+            <h2>CareMe en <span>Acción</span></h2>
+            <p>Descubre cómo funciona nuestra plataforma: desde encontrar al cuidador perfecto hasta brindar seguridad y tranquilidad a tu familia con nuestras herramientas especializadas.</p>
+            <div class="video-cta">
+                <a href="public/html/login.html?form=register" class="video-btn">Probar CareMe</a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="testimonials-section">
             <h2 class="testimonials-title">Que Dicen <span>Nuestros Clientes</span></h2>
@@ -198,11 +244,11 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="public/assets/icons/careme.svg" alt="CareMe Logo" class="footer-logo-icon">
+                        <a href="#"><img src="public/assets/icons/careme.svg" alt="CareMe Logo" class="footer-logo-icon" id="footer-logo-careme"></a>
                     </div>
                     <div class="footer-app-links">
-                        <img src="public/assets/images/get-googleplay.png" alt="Google Play" class="app-download">
-                        <img src="public/assets/images/get-appstore.png" alt="App Store" class="app-download">
+                        <a href="https://play.google.com/store/apps" target="_blank"><img src="public/assets/images/get-googleplay.png" alt="Google Play" class="app-download"></a>
+                        <a href="https://www.apple.com/app-store/" target="_blank"><img src="public/assets/images/get-appstore.png" alt="App Store" class="app-download"></a>
                     </div>
                     <div class="footer-country">
                         <span>Perú</span>
@@ -214,43 +260,43 @@
                     <div class="footer-column">
                         <h4>Cuidadores</h4>
                         <ul>
-                            <li><a href="#">Sé parte del cambio</a></li>
-                            <li><a href="#">Requisitos para cuidadores</a></li>
-                            <li><a href="#">Beneficios</a></li>
+                            <li><a href="public/html/caregivers.html">Sé parte del cambio</a></li>
+                            <li><a href="public/html/caregivers.html">Requisitos para cuidadores</a></li>
+                            <li><a href="public/html/caregivers.html">Beneficios</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Personas dependientes</h4>
                         <ul>
-                            <li><a href="#">Únete a la familia CareMe</a></li>
-                            <li><a href="#">Testimonios</a></li>
-                            <li><a href="#">Cómo elegir al cuidador adecuado</a></li>
+                            <li><a href="public/html/dependent-persons.html">Únete a la familia CareMe</a></li>
+                            <li><a href="#" id="testimonios">Testimonios</a></li>
+                            <li><a href="public/html/dependent-persons.html">Cómo elegir al cuidador adecuado</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Contáctanos</h4>
                         <ul>
-                            <li><a href="#">Formulario de contacto</a></li>
-                            <li><a href="#">Atención al Cliente</a></li>
+                            <li><a href="#" id="formulario-contacto-footer">Formulario de contacto</a></li>
+                            <li><a href="public/html/help.html">Atención al Cliente</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Nosotros</h4>
                         <ul>
-                            <li><a href="#">Sobre Nosotros</a></li>
-                            <li><a href="#">Conoce nuestra marca</a></li>
-                            <li><a href="#">Únete al equipo</a></li>
+                            <li><a href="#" id="sobre-nosotros-footer">Sobre Nosotros</a></li>
+                            <li><a href="#" id="conoce-nuestra-marca-footer">Conoce nuestra marca</a></li>
+                            <li><a href="public/html/login.html">Únete al equipo</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Ayuda</h4>
                         <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="public/html/help.html">FAQ</a></li>
+                            <li><a href="public/html/help.html">Términos y condiciones</a></li>
                         </ul>
                     </div>
                 </div>
@@ -258,19 +304,19 @@
 
             <div class="footer-bottom">
                 <div class="footer-social">
-                    <a href="#" class="social-link">
+                    <a href="https://www.facebook.com/" class="social-link" target="_blank" noreferrer>
                         <img src="public/assets/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://x.com/home?lang=es" class="social-link" target="_blank" noreferrer>
                         <img src="public/assets/icons/twitter.svg" alt="Twitter" class="social-icon">
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://www.instagram.com/" class="social-link" target="_blank" noreferrer>
                         <img src="public/assets/icons/instagram.svg" alt="Instagram" class="social-icon">
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://www.tiktok.com/es/" class="social-link" target="_blank" noreferrer>
                         <img src="public/assets/icons/tiktok.svg" alt="TikTok" class="social-icon">
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://www.linkedin.com/" class="social-link" target="_blank" noreferrer>
                         <img src="public/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
                     </a>
                 </div>
